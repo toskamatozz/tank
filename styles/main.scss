@@ -1,0 +1,96 @@
+*   {
+    margin: 0;
+    padding: 0;
+}
+.tank  {
+    position: relative;
+    left: 500px;
+    transition: all 5s ease-in;
+    img    {
+        transform: rotateY(180deg);
+    }
+}
+.bullet {
+    position: absolute;
+    top: 38px;
+    left: 200px;
+    z-index: -1;
+    img    {
+        transform: rotateY(0deg);
+    }    
+}
+.beam   {
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    display: none;
+    img {
+        transform: rotate(22deg);
+    }
+}
+.beam_on   {
+    display: block;
+}
+.shot   {
+    animation: pew 1s linear infinite;
+}
+.forward    {
+    transform: translateX(500px);
+}
+.backward   {
+    transform: translateX(-500px);
+}
+.buttons    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bw   {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.shoot   {
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-family: Verdana;
+    font-weight: bolder;
+}
+.light   {
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-family: Verdana;
+    font-weight: bolder;
+}
+.fw   {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+@keyframes pew {
+    from {transform: translateX(0px);}
+    to {transform: translateX(1500px);}
+}
